@@ -14,6 +14,7 @@ namespace SimpleCSharpApp
             Console.WriteLine("***** My First C# App *****");
             Console.WriteLine("Hello World!");
             Console.WriteLine();
+            Console.ReadLine();
         }
 
         // Alt 1:
@@ -37,6 +38,19 @@ namespace SimpleCSharpApp
         //{
         //    // Must return a value before exiting!
         //    return 0;
+        //}
+
+        // Note we are now returning an int, rather than void.
+        //static int Main(string[] args)
+        //{
+        //    // Display a simple message to the user.
+        //    Console.WriteLine("***** My First C# App *****");
+        //    Console.WriteLine("Hello World!");
+        //    Console.WriteLine();
+        //    Console.ReadLine();
+
+        //    // Return an arbitrary error code.
+        //    return -1;
         //}
     }
 }
