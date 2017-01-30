@@ -8,12 +8,34 @@ namespace SimpleCSharpApp
 {
     class Program
     {
+        static void ShowEnvironmentalDetails()
+        {
+            foreach (string drive in Environment.GetLogicalDrives())
+            {
+                Console.WriteLine("Drive: {0}", drive);
+            }
+
+            Console.WriteLine("OS: {0}", Environment.OSVersion);
+            Console.WriteLine("Number of processors: {0}", Environment.ProcessorCount);
+            Console.WriteLine(".NET Version: {0}", Environment.Version);
+        }
         static void Main(string[] args)
         {
             // Display a simple message to the user.
             Console.WriteLine("***** My First C# App *****");
             Console.WriteLine("Hello World!");
             Console.WriteLine();
+
+            // Get arguments using System.Environment
+            string[] theArgs = Environment.GetCommandLineArgs();
+            foreach (string arg in theArgs)
+            {
+                Console.WriteLine("Arg: {0}", arg);
+            }
+
+            Console.WriteLine();
+            ShowEnvironmentalDetails();
+
             Console.ReadLine();
         }
 
